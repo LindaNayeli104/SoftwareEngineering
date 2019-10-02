@@ -7,8 +7,6 @@ public class Client {
 		System.out.println(pref.toString());
 		pref.setShareInfo(true);
 		System.out.println(pref.toString());
-		
-		
 		//...
 		//pref = new Preferences();
 		pref =  Preferences.getInstance();
