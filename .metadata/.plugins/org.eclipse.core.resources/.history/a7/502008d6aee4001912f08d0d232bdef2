@@ -1,0 +1,30 @@
+import javax.swing.JSlider;
+
+public class Pruebas {
+
+	
+			//y1_slider
+			this.y1_slider = new JSlider(JSlider.VERTICAL, 3, 15, 8);
+	        this.y1_slider.setMinorTickSpacing(0);
+	        this.y1_slider.setMajorTickSpacing(1);
+	        this.y1_slider.setPaintTicks(true);
+	        this.y1_slider.setPaintLabels(true);
+	        this.y1_slider.addChangeListener(this);
+	        
+	        
+	        //y2_slider
+	        this.y2_slider = new JSlider(JSlider.VERTICAL, 0, 200, 0);
+	        this.y2_slider.setMinorTickSpacing(10);
+	        this.y2_slider.setMajorTickSpacing(40);
+	        this.y2_slider.setPaintTicks(true);
+	        this.y2_slider.setPaintLabels(true);
+	        this.y2_slider.addChangeListener(this);
+	        
+	        //y3_slider
+	        this.y3_slider = new JSlider(JSlider.VERTICAL, 10, 50, 10);
+	        this.y3_slider.setMinorTickSpacing(5);
+	        this.y3_slider.setMajorTickSpacing(10);
+	        this.y3_slider.setPaintTicks(true);
+	        this.y3_slider.setPaintLabels(true);
+	        this.y3_slider.addChangeListener(this);
+}

@@ -1,0 +1,204 @@
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GradientPaint;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.JTextField;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+public class Triangle_Box extends JFrame {
+	
+	public Triangle_Box(){
+		super("Getting triangle area");
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		PanelExtra pe = new PanelExtra();
+		this.add(pe);
+		this.add(new ConfiguracionPanel(pe), BorderLayout.WEST);
+		this.pack();
+		this.setVisible(true);
+	}
+	public static void main(String[] args) { 
+		 Triangle_Box ep = new Triangle_Box();
+	 }
+	
+	
+	
+	
+//Clase de la Espiral
+class PanelExtra extends JPanel {
+	private int lados;
+	private int radio;
+	private int vertices;
+	private int centro;
+
+	public PanelExtra(){
+		super();
+		this.lados = 18;
+		this.radio = 200;
+		this.vertices = 8;
+		this.centro = 400;
+		this.setPreferredSize(new Dimension(800, 800));
+	}
+	
+	
+//Llama metodos
+	public void paint(Graphics g) { // Espiral
+		super.paintComponent(g); 
+		this.Poligono(g);
+	 }
+	
+//Setters
+	public void set_x1(int vertices){
+		this.vertices = vertices;
+		repaint();
+	}
+	
+	public void set_x2(int radio){
+		this.radio = radio;
+		repaint();
+	}
+	
+	public void set_x3(int lados){
+		this.lados = lados;
+		repaint();
+	}
+	
+	public void set_y1(int vertices){
+		this.vertices = vertices;
+		repaint();
+	}
+	
+	public void set_y2(int radio){
+		this.radio = radio;
+		repaint();
+	}
+	
+	public void set_y3(int lados){
+		this.lados = lados;
+		repaint();
+	}
+	
+//Poligono
+	public void Poligono(Graphics g){
+		
+	 	g.setColor(Color.BLACK);
+	 	g.drawLine(int x1, int y1, int x2, int y2);
+	 	g.drawLine(int x2, int y2, int x3, int y3);
+	 	g.drawLine(int x3, int y3, int x1, int y1);
+	}
+	
+
+}
+
+
+//Clase Configuracion
+class ConfiguracionPanel extends JPanel implements ChangeListener{
+	private PanelExtra pd = new PanelExtra();
+	
+	private JLabel x1_label,
+				   x2_label,
+				   x3_label,
+				   y1_label,
+				   y2_label,
+				   y3_label;
+	
+
+	private JTextField x1_tf,
+					   x2_tf,
+					   x3_tf,
+					   y1_tf,
+					   y2_tf,
+					   y3_tf;
+
+	private JButton btnCalcula;
+
+					
+	
+	
+	
+	
+	
+	private JButton btconfigurar;
+	public ConfiguracionPanel(PanelExtra pd){
+		super();
+		this.pd = pd;
+		this.setPreferredSize(new Dimension(200,800));
+		this.setBackground(Color.GRAY);
+		
+		
+		//New
+		this.x1_label = new JLabel("x1");
+		this.x2_label= new JLabel("x2");
+		this.x3_label = new JLabel("x3");
+		this.y1_label = new JLabel("y1");
+		this.y2_label= new JLabel("y2");
+		this.y3_label = new JLabel("y3");
+		
+		this.x1_tf = new JTextField(10);
+		this.x2_tf = new JTextField(10);
+		this.x3_tf = new JTextField(10);
+		this.y1_tf = new JTextField(10);
+		this.y2_tf = new JTextField(10);
+		this.y3_tf = new JTextField(10);
+		
+
+		this.btnCalcula=new JButton("Calcula Area");
+		/*this.btnCalcula.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				//pd.setNombre(tfNombre.getText());
+				
+			}
+			
+		}
+        */
+		
+		//Add		
+        
+		this.add(x1_label);
+		this.add(x1_tf);
+		
+		this.add(y1_label);
+		this.add(y1_tf);
+		
+		
+		this.add(x2_label);
+		this.add(x2_tf);
+		
+		this.add(y2_label);
+		this.add(y2_tf);
+
+		
+		this.add(x3_label);
+		this.add(x3_tf);
+		
+		this.add(y3_label);
+		this.add(y3_tf);
+		
+		this.add(btnCalcula);
+				
+	}
+	
+	public void stateChanged(ChangeEvent e) {
+		this.pd.set_x1(this.x1_slider.getValue());
+		this.pd.set_x2(this.x2_slider.getValue());
+		this.pd.set_x3(this.x3_slider.getValue());
+		this.pd.set_y1(this.y1_slider.getValue());
+		this.pd.set_y2(this.y2_slider.getValue());
+		this.pd.set_y3(this.y3_slider.getValue());
+	}
+	
+}
+ 
+}
