@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="Color" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="color"/>
+			<item value="Poligono"/>
+			<item value="Pinta_Triangulo"/>
+			<item value="change"/>
+			<item value="setLin"/>
+			<item value="setRad"/>
+			<item value="setLad"/>
+			<item value="setLineas"/>
+			<item value="setRadio"/>
+			<item value="setLado"/>
+			<item value="x3_slider"/>
+			<item value="x2_slider"/>
+			<item value="x1_slider"/>
+			<item value="lineasSlider"/>
+			<item value="radioSlider"/>
+		</list>
+		<list key="replacehistory">
+			<item value="Pinta_Triangulo"/>
+			<item value=""/>
+			<item value="set_y3"/>
+			<item value="set_y2"/>
+			<item value="set_y1"/>
+			<item value="set_x3"/>
+			<item value="set_x2"/>
+			<item value="set_x1"/>
+			<item value="y3_slider"/>
+			<item value="y2_slider"/>
+			<item value="y1_slider"/>
+			<item value="x3_slider"/>
+			<item value="x2_slider"/>
+			<item value="x1_slider"/>
+			<item value="x3_label"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="336" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="454" key="DIALOG_HEIGHT"/>
+		<item value="1337" key="DIALOG_X_ORIGIN"/>
+		<item value="249" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

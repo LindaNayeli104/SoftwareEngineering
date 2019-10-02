@@ -1,6 +1,6 @@
 
 public class Vertex {
-	private double x, y;
+	protected double x, y;
 	
 	public Vertex() {
 		this.x = 0.0;

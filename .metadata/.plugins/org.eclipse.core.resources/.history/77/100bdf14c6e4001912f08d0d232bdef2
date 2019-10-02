@@ -1,0 +1,154 @@
+//---------------------------------------------------------------------------------------------------------VENTANA
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GradientPaint;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+public class Triangle_Box extends JFrame {
+	
+	public Triangle_Box(){
+		super("Getting triangle area");
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		ConfiguracionPanel pe = new ConfiguracionPanel();
+		this.add(pe);
+		this.pack();
+		this.setVisible(true);
+		this.setResizable(false);
+	}
+	public static void main(String[] args) { 
+		 Triangle_Box ep = new Triangle_Box();
+	 }
+	
+	
+	
+
+//-------------------------------------------------------------------------------------------------------CONTROLES
+//Clase Configuracion
+class ConfiguracionPanel extends JPanel implements ActionListener{
+	
+	
+	private JLabel x1_label,
+				   x2_label,
+				   x3_label,
+				   y1_label,
+				   y2_label,
+				   y3_label,
+				   area_label;
+	
+
+	private JTextField x1_tf,
+					   x2_tf,
+					   x3_tf,
+					   y1_tf,
+					   y2_tf,
+					   y3_tf;
+
+	private JButton btnCalcula;
+	
+	public ConfiguracionPanel(){
+		super();
+		this.setPreferredSize(new Dimension(200,800));
+		this.setBackground(Color.GRAY);
+		
+		//New
+		this.x1_label = new JLabel("x1");
+		this.x2_label= new JLabel("x2");
+		this.x3_label = new JLabel("x3");
+		this.y1_label = new JLabel("y1");
+		this.y2_label= new JLabel("y2");
+		this.y3_label = new JLabel("y3");
+		this.area_label = new JLabel(" ");
+		
+		this.x1_tf = new JTextField(10);
+		this.x2_tf = new JTextField(10);
+		this.x3_tf = new JTextField(10);
+		this.y1_tf = new JTextField(10);
+		this.y2_tf = new JTextField(10);
+		this.y3_tf = new JTextField(10);
+		
+		
+		
+		
+
+		this.btnCalcula=new JButton("Calcula Area");
+		this.btnCalcula.addActionListener(this);
+		
+		//Add		
+        
+		this.add(x1_label);
+		this.add(x1_tf);
+				
+		this.add(y1_label);
+		this.add(y1_tf);
+			
+		this.add(x2_label);
+		this.add(x2_tf);
+		
+		this.add(y2_label);
+		this.add(y2_tf);
+
+		
+		this.add(x3_label);
+		this.add(x3_tf);
+		
+		this.add(y3_label);
+		this.add(y3_tf);
+		
+		this.add(btnCalcula);
+		
+		this.add(area_label);
+		
+		
+	}
+	
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		g.setFont(new Font("Aharoni",Font.PLAIN , 15));
+		g.drawString("ÁREA TRIÁNGULO", 45,50);
+		x1_label.setLocation(25, 150);
+		y1_label.setLocation(25, 175);
+		x2_label.setLocation(25, 225);
+		y2_label.setLocation(25, 250);
+		x3_label.setLocation(25, 300);
+		y3_label.setLocation(25, 325);
+		
+		x1_tf.setLocation(60, 150);
+		y1_tf.setLocation(60, 175);
+		x2_tf.setLocation(60, 225);
+		y2_tf.setLocation(60, 250);
+		x3_tf.setLocation(60, 300);
+		y3_tf.setLocation(60, 325);
+		
+		btnCalcula.setLocation(65, 375);
+		area_label.setLocation(60, 500);
+		
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		
+		
+		Triangle tri = new Triangle(Double.parseDouble(x1_tf.getText()),Double.parseDouble(x2_tf.getText()), Double.parseDouble(x3_tf.getText()), Double.parseDouble(y1_tf.getText()), Double.parseDouble(y2_tf.getText()), Double.parseDouble(y3_tf.getText()));
+				area_label.setText("Area: " + String.valueOf(tri.get_Area()) + "m^2");   //Concatenar area
+			}
+			
+	}		
+}
+
+
+
+
+ 

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;Triangle_Box.java&apos; to &apos;Triangle_GUI.java&apos;&#x0D;&#x0A;- Original project: &apos;Tareas&apos;&#x0D;&#x0A;- Original element: &apos;Triangle_Box.java&apos;&#x0D;&#x0A;- Renamed element: &apos;Triangle_GUI.java&apos;" description="Rename compilation unit &apos;Triangle_Box.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;{Triangle_Box.java" name="Triangle_GUI.java" references="false" stamp="1569989918294" version="1.0"/>
+</session>

@@ -1,6 +1,6 @@
 
 public class Triangle{
-	private Vertex v1, v2, v3;
+	protected Vertex v1, v2, v3;
 	
 	
 	public Triangle(double x1, double x2, double x3, double y1, double y2, double y3) {
