@@ -1,4 +1,4 @@
-
+//Linda Nayeli Abundis Lopez
 public class Vertex {
 	protected double x, y;
 	
