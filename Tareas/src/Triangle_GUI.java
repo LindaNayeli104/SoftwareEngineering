@@ -1,25 +1,7 @@
 //---------------------------------------------------------------------------------------------------------VENTANA
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.GradientPaint;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Image;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JSlider;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.event.*;
 public class Triangle_GUI extends JFrame {
 	
 	public Triangle_GUI(){
@@ -87,7 +69,7 @@ class ConfiguracionPanel extends JPanel implements ActionListener{
 		
 		
 
-		this.btnCalcula=new JButton("Calcula ¡rea");
+		this.btnCalcula=new JButton("Calcula √Årea");
 		this.btnCalcula.addActionListener(this);
 		
 		//Add		
@@ -123,8 +105,8 @@ class ConfiguracionPanel extends JPanel implements ActionListener{
 		g.drawImage(this.img, 0, 0, this.getWidth(),  this.getHeight(),  this);
 		
 		g.setFont(new Font("Impact",Font.PLAIN , 45));
-		g.drawString("¡REA", 200,55);
-		g.drawString("TRI¡NGULO", 155,105);
+		g.drawString("√ÅREA", 200,55);
+		g.drawString("TRI√ÅNGULO", 155,105);
 		x1_label.setLocation(175, 150);
 		y1_label.setLocation(175, 175);
 		x2_label.setLocation(175, 225);
